@@ -1,4 +1,5 @@
 <template>
-	<input value.bind="message">
-  <h1>${message & oneTime & signal:'my-signal'}</h1>
+	<!--throttle, debounce, updateTrigger:'blur'-->
+	<input type="text" value.bind="message & throttle:1500">
+  <h1>${message}</h1>
 </template>
