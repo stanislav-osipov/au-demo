@@ -1,4 +1,6 @@
 <template>
+  <require from="./app"></require>
+
   <input value.bind="message">
-  <h1 click.trigger="onMessageClick()">${message}</h1>
+  <h1>${message | sample:'params'}</h1>
 </template>
