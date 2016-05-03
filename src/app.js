@@ -1,9 +1,11 @@
+import {BindingSignaler} from 'aurelia-templating-resources';
+import {inject} from 'aurelia-framework';
+
+@inject(BindingSignaler)
 export class App {
   message = 'Welcome to Aurelia!';
-}
 
-export class SampleValueConverter {
-  toView(string, params) {
-    return string + ' - converted to View with parameters: ' + params;
+  constructor(signaler) {
+  	setInterval(() => signaler.signal('my-signal'), 2000);
   }
 }

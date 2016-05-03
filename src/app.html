@@ -1,6 +1,4 @@
 <template>
-  <require from="./app"></require>
-
-  <input value.bind="message">
-  <h1>${message | sample:'params'}</h1>
+	<input value.bind="message">
+  <h1>${message & oneTime & signal:'my-signal'}</h1>
 </template>
