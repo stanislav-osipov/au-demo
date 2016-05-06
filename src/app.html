@@ -1,5 +1,5 @@
 <template>
-  <require from="./hello-world.html"></require>
+  <require from="./square"></require>
 
-  <hello-world preposition="to" framework-name="Aurelia"></hello-world>
+  <div repeat.for="square of squares" square.bind="square.color"> Aurelia custom attribute</div>
 </template>
